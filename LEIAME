@@ -1,0 +1,94 @@
+AUTOR:
+	Rodrigo de Castro Michelassi
+	13672703
+	rodrigo.michelassi@usp.br
+
+DESCRIÇÃO:
+	O programa em questão foi feito para a disciplina MAC0216 - Técnicas de Programação I, no Instituto de Matemática e Estatística da USP.
+	Esse programa foi feito na linguagem c++, com o objetivo de colocar os alunos em contato com a programação orientada à objetos, utilizada
+para definir classes, objetos, métodos e atributos para os personagens do jogo Pacman.
+	O jogo recebe um labirinto de entrada, com uma letra C e cinco letras F, que representam, respectivamente, o Pacman e os fantasmas, que devem
+ser evitados, como no próprio jogo Pacman. O objetivo é coletar o maior número de pacdots possíveis e obter a maior pontuação no final. Caso todos os
+pacdots sejam coletados, o usuário venceu, e, caso entre em contato com um fantasma, o usuário perde.
+	
+COMO EXECUTAR:
+
+	O programa enviado possui quatro formas de execução, utilizadas com o comando make. Vale lembrar que, para obter o make em uma máquina com Ubuntu,
+podemos rodar o seguinte comando no terminal:
+
+		$ sudo apt-get update
+		$ sudo apt-get install make
+		
+	Com isso instalado, podemos ir ao diretório do jogo e rodar:
+	
+		$ make all	# roda o jogo
+		$ make tests	# roda os testes feitos com Google Test
+		$ make doc	# gera a documentação
+		$ make clean	# limpa os arquivos desnecessários e/ou gerados durante as outras compilações
+		
+	Após isso, o programa estará compilado, e basta rodar:
+	
+		$ ./ep4
+		
+	Ao iniciar, o jogo pede o nome de um arquivo, que deve conter a matriz que será usada como labirinto. Como o programa roda com os fantasmas em uma
+posição fixa, recomenda-se utilizar a matriz mostrada na sessão "TESTES" desse mesmo LEIAME.
+
+TESTES:
+	
+	Os testes no programa foram feitos usando o Google Test,  e podem ser executados da forma acima. Vale lembrar que a entrada padrão do programa  é:
+	
+		***************************
+		*.........................*
+		*.**********.**.*********.*
+		*.**********.**.*********.*
+		*......**....**...**......*
+		***.**.**.*******.**.**.***
+		***.**.**.*******.**.**.***
+		*...**...............**...*
+		*.****.*****.**.****.****.*
+		*.****.*****.**.****.****.*
+		*............**...........*
+		******.**.*******.**.******
+		******.**.*******.**.******
+		******.**.........**.******
+		******.**.*******.**.******
+		******.**.*.. ..*.**.******
+		..........*.....*..........
+		******.**.*.....*.**.******
+		******.**.***..**.**.******
+		******.**.........**.******
+		******.*****.**.****.******
+		******.*****.**.****.******
+		*......**....**...**......*
+		*.****.**.*******.**.****.*
+		*.****.**.*******.**.****.*
+		*.........................*
+		*.****.*****.**.****.****.*
+		*.****.*****.**.****.****.*
+		*.****.*****.**.****.****.*
+		*............**...........*
+		***************************
+
+	Que deve estar em um arquivo .txt, cujo nome será informado no jogo programa, e tanto os fantasmas como o pacman possuem posições fixas.
+		
+	Os testes feitos tem como objetivo verificar a funcionalidade dos objetos usados no programa. Dentre os principais, estão a caminhada do pacman e dos fantasmas.
+	Vale lembrar que os testes também pedem o nome do arquivo .txt, que deve conter a matriz exposta acima, para garantir seu funcionamento.
+
+
+DEPENDÊNCIAS:
+	Para executar o arquivo .CPP é necessário, em uma máquina com UBUNTU, utilizar o programa G++, para obte-lo digite no terminal:
+		
+		$ sudo apt-get update
+		$ sudo apt-get install g++
+
+	Além disso, é necessário possuir o MAKE em sua máquina. Para instalar essa ferramenta, use:
+	
+		$ sudo apt-get install make
+
+	Como valores de referência, esse programa foi feito em um notebook com as seguintes especificações:
+		Versão Ubuntu: Ubuntu 21.10
+		Versão GCC: gcc (Ubuntu 11.2.0-7ubuntu2) 11.2.0 (digitar: $ gcc --version no terminal)
+		Processador: Intel(R) Core(TM) i7-8565U CPU @ 1.80GH
+		Memória Sistema: 8GB (2*4GB SODIMM DDR4 Synchronous 2400 MHz) RAM
+		Versão do Linker: GNU ld (GNU Binutils for Ubuntu) 2.37
+
